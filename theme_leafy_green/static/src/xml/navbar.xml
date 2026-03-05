@@ -1,0 +1,70 @@
+<templates>
+  <t t-inherit="web.NavBar.AppsMenu" t-inherit-mode="extension">
+    <xpath expr="//t[@t-if='env.isSmall']" position="replace">
+      <a t-if='env.isSmall' href="/odoo" class="o_menu_toggle border-0"
+        t-att-class="{'hasImage': currentApp?.webIconData}" accesskey="h" t-ref="menuApps"
+        t-on-click.prevent="_openAppMenuSidebar">
+        <t t-call="web.NavBar.AppsMenu.Sidebar" />
+      </a>
+    </xpath>
+    <xpath expr="//t[@t-else='']" position="replace">
+      <div t-if='!env.isSmall' class="d-flex align-items-center justify-content-center">
+        <div
+          t-attf-class="d-flex flex-column gap-2 lg_side_bar scrollbar-none {{state.isSidebarOpen and 'lg_side_bar_open'}}"
+        >
+          <div class="lg_company_logo">
+            <img t-attf-src="{{state.companyLogo}}"
+              t-on-click="!state.isSidebarOpen ? handleCompanyClick : () => {}"
+              t-att-data-tooltip="!state.isSidebarOpen and user.activeCompany.name"
+              data-tooltip-position="right" />
+            <div class="lg_company_text_col">
+              <span class="lg_company_name text-truncate" t-esc="user.activeCompany.name" />
+              <span class="lg_company_currency badge text-bg-primary text-truncate">
+                <i class="ri-cash-line me-1" />
+                <span t-esc="state.companyCurrency.name" />
+              </span>
+            </div>
+            <i class="ri-arrow-right-s-line lg_company_arrow" t-on-click="handleCompanyClick" />
+          </div>
+
+          <t t-if="menuService" t-foreach="menuService.getApps()" t-as="app" t-key="app.id">
+            <li
+              t-att-data-menu-xmlid="app.xmlid"
+              t-att-data-tooltip="!state.isSidebarOpen and app.name" data-tooltip-position="right"
+              t-attf-class="o_app fw-bolder lg_app_list_icon {{menuService.getCurrentApp() === app and 'bg-primary-subtle'}}"
+              t-on-click="() => this.menuService.selectMenu(app)">
+              <img
+                t-if="app.webIconData"
+                class="o_app_icon"
+                t-attf-src="{{app.webIconData}}" />
+              <span class="lg_app_name" t-esc="app.name" />
+            </li>
+          </t>
+
+          <div class="lg_search">
+            <div class="lg_search_container"
+              t-att-data-tooltip="!state.isSidebarOpen and 'Search apps and menus...'"
+              data-tooltip-position="right" t-on-click="handleSearchClick"  data-hotkey="a">
+              <i class="ri-search-line" />
+              <div class="lg_search_text_col">
+                <span class="lg_search_text text-truncate">Search apps and menus...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <t t-if="currentApp and currentApp.webIconData">
+          <button style="height: 2em; width: 3em;"
+            t-on-click="toggleSidebar"
+            class="lg_app_icon border-0 bg-transparent d-flex align-items-center justify-content-center cursor-pointer"
+            data-hotkey="h" t-att-title="state.isSidebarOpen ? 'Collapse Menu' : 'Expand Menu'">
+            <img style="height: 1.5em; width: 1.5em; object-fit: contain;"
+              class="o_app_icon lg_app_icon_img"
+              t-attf-src="{{currentApp.webIconData}}" />
+            <i t-attf-class="lg_app_icon_ri {{state.isSidebarOpen ? 'ri-layout-left-2-line' : 'ri-layout-left-line'}}" />
+          </button>
+        </t>
+      </div>
+    </xpath>
+  </t>
+</templates>
