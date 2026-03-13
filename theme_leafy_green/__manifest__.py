@@ -10,19 +10,7 @@ of Odoo Community Edition with a clean and professional look.
     'sequence': 3,
     'category': 'Themes/Backend',
     'depends': ['base', 'web'],
-
-    'price': 1.00,
-    'currency': 'EUR',
-
     'author': 'Wyn Interactive Ltd.',
-    'license': 'OPL-1',
-
-    'application': False,
-    'installable': True,
-
-    "images": [
-        "static/description/banner.jpg",
-    ],
 
     'assets': {
         'web.assets_backend': [
@@ -36,4 +24,15 @@ of Odoo Community Edition with a clean and professional look.
             'theme_leafy_green/static/src/scss/primary_variables.scss',
         ]
     },
+
+    "images": [
+        "static/description/banner.jpg",
+        "static/description/theme_screenshot.jpg",
+    ],
+
+    'license': 'OPL-1',
+    'application': False,
+    'installable': True,
+    'price': 1.00,
+    'currency': 'EUR',
 }
