@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Leafy Green',
-    'version': '19.0.1.0.0',
+    'name': 'Leafy Green Backend Theme',
+    'version': '19.0.1.0.1',
     'summary': 'Modern backend theme for Odoo Community Edition',
     'description': """
 Leafy Green is a modern backend theme designed to enhance the user interface
@@ -14,7 +14,7 @@ of Odoo Community Edition with a clean and professional look.
     'price': 1.00,
     'currency': 'EUR',
 
-    'author': 'Mehbin Interactive',
+    'author': 'Mehbin Interactive Ltd.',
     'license': 'OPL-1',
 
     'application': False,
@@ -22,10 +22,10 @@ of Odoo Community Edition with a clean and professional look.
 
     'images': [
         'static/description/banner.gif',
+        'static/description/theme_screenshot.png',
         'static/description/dashboard.png',
         'static/description/screenshot_responsive.png',
         'static/description/screenshot_sidebar.png',
-        'static/description/mehbin_interactive.png',
     ],
 
     'assets': {
