@@ -14,7 +14,7 @@ of Odoo Community Edition with a clean and professional look.
     'price': 1.00,
     'currency': 'EUR',
 
-    'author': 'Mehbin Interactive Ltd.',
+    'author': 'Wyn Interactive Ltd.',
     'license': 'OPL-1',
 
     'application': False,
@@ -22,7 +22,7 @@ of Odoo Community Edition with a clean and professional look.
 
     'images': [
         'static/description/theme_screenshot.gif',
-        'static/description/banner.png',
+        'static/description/theme_screenshot.png',
         'static/description/dashboard.png',
         'static/description/screenshot_responsive.png',
         'static/description/screenshot_sidebar.png',
