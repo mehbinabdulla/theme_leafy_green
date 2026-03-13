@@ -21,8 +21,7 @@ of Odoo Community Edition with a clean and professional look.
     'installable': True,
 
     "images": [
-        "static/description/theme_screenshot.png",  # square preview
-        "static/description/banner.jpg",            # wide banner
+        "static/description/banner.gif",
     ],
 
     'assets': {
