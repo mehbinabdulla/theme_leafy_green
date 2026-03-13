@@ -22,7 +22,7 @@ of Odoo Community Edition with a clean and professional look.
 
     'images': [
         'static/description/main_screenshot.png',
-        'static/description/theme_screenshot.gif',
+        'static/description/banner.gif',
         'static/description/dashboard.png',
         'static/description/screenshot_responsive.png',
         'static/description/screenshot_sidebar.png',
