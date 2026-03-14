@@ -1,8 +1,8 @@
 @font-face {
     font-family: "remixicon";
-    src: url("/leafy_green/static/fonts/remixicon.woff2") format("woff2"),
-         url("/leafy_green/static/fonts/remixicon.woff") format("woff"),
-         url("/leafy_green/static/fonts/remixicon.ttf") format("truetype");
+    src: url("/theme_leafy_green/static/fonts/remixicon.woff2") format("woff2"),
+         url("/theme_leafy_green/static/fonts/remixicon.woff") format("woff"),
+         url("/theme_leafy_green/static/fonts/remixicon.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
