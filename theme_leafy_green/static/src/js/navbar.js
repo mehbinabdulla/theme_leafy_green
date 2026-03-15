@@ -34,7 +34,7 @@ patch(NavBar.prototype, {
           ? "15em"
           : this.env.isSmall
             ? "0em"
-            : "4em";
+            : "4.25em";
       },
       () => [this.state.isSidebarOpen, this.env.isSmall],
     );
@@ -46,7 +46,7 @@ patch(NavBar.prototype, {
       ? "15em"
       : this.env.isSmall
         ? "0em"
-        : "4em";
+        : "4.25em";
   },
 
   handleCompanyClick() {

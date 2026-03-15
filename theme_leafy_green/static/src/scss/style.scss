@@ -88,7 +88,7 @@ body {
   top: 0;
   left: 0;
   height: 100dvh;
-  z-index: 10;
+  z-index: 1050;
   padding: 0 0.5em; /* Constant inner padding */
   overflow-x: hidden; /* Stops jumpiness internally */
   transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -112,6 +112,11 @@ body {
     box-shadow 0.2s;
 }
 
+.lg_app_list_icon.active {
+  background: color-mix(in srgb, var(--primary-bg-subtle) 25%, transparent);
+  outline: 1px solid var(--primary-border-subtle);
+}
+
 .lg_side_bar_open .lg_app_list_icon {
   gap: 0.8em;
 }
@@ -124,9 +129,9 @@ body {
 }
 
 .lg_app_list_icon:hover {
-  background-color: var(--secondary);
+  background: color-mix(in srgb, var(--primary-bg-subtle) 45%, transparent);
   img {
-    animation: rotate 0.3s ease-in-out 1;
+    animation: rotate 0.3s ease-in-out 2;
   }
 }
 
@@ -252,7 +257,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 100%;
+  width: 106%;
   padding: 12px 3.25px 12px;
   overflow: hidden;
   white-space: nowrap;
@@ -262,6 +267,7 @@ body {
   background-color: white;
   z-index: 100;
   border-top: 1px solid var(--secondary);
+  transform: translateX(-3%);
 }
 
 .lg_search_container {
@@ -273,16 +279,17 @@ body {
   border-radius: 0.75em;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
-  background-color: var(--secondary) !important;
+  background-color: var(--light-bg-subtle);
+  outline: 1px solid var(--light-border-subtle);
 
   i {
-    font-size: 18px;
-    padding: 5.5px;
+    font-size: 24px;
+    padding: 2.5px;
   }
 }
 
 .lg_search_container:hover {
-  animation: rotate 0.3s ease-in-out 1;
+  animation: rotate 0.3s ease-in-out 2;
 }
 
 .lg_side_bar_open .lg_search_container:hover {
@@ -298,7 +305,7 @@ body {
   width: 100%;
 
   i {
-    font-size: 14px;
+    font-size: 16px;
     padding: 5.6px 5.5px 5.6px 3px;
   }
 }
@@ -319,7 +326,7 @@ body {
 }
 
 .lg_search_text {
-  font-size: 12px;
+  font-size: 13px;
   white-space: nowrap;
 }
 
@@ -467,6 +474,9 @@ body {
   background-color: #e8ebe7;
   border-radius: 0.4rem;
   .btn.btn-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     --btn-padding-x: 0.5rem;
     border-radius: 0;
     background-color: transparent;
@@ -476,6 +486,11 @@ body {
     min-height: 33px;
     max-height: 33px;
   }
+
+  // [class^="oi-"]:before,
+  // [class*=" oi-"]:before {
+  //   font-weight: bold !important;
+  // }
 
   .btn.btn-secondary.active {
     background-color: var(--primary);
@@ -504,6 +519,12 @@ body {
 
 .nav-tabs {
   --nav-tabs-border-radius: 0 !important;
+}
+
+.o_search_panel_sidebar {
+  button .oi.oi-panel-right::before {
+    font-size: 16px !important;
+  }
 }
 
 //Kanban View

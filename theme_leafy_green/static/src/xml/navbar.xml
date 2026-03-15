@@ -31,7 +31,7 @@
             <li
               t-att-data-menu-xmlid="app.xmlid"
               t-att-data-tooltip="!state.isSidebarOpen and app.name" data-tooltip-position="right"
-              t-attf-class="o_app fw-bolder lg_app_list_icon {{menuService.getCurrentApp() === app and 'bg-primary-subtle'}}"
+              t-attf-class="o_app fw-bolder lg_app_list_icon {{menuService.getCurrentApp() === app and 'active'}}"
               t-on-click="() => this.menuService.selectMenu(app)">
               <img
                 t-if="app.webIconData"
