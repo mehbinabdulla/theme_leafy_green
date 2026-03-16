@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Leafy Green Backend Theme',
-    'version': '19.0.1.0.1',
+    'version': '19.0.1.0.2',
     'summary': 'Modern backend theme for Odoo Community Edition',
     'description': """
 Leafy Green is a modern backend theme designed to enhance the user interface
