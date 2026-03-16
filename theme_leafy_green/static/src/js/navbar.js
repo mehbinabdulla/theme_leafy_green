@@ -30,10 +30,10 @@ patch(NavBar.prototype, {
     console.log(this);
     useEffect(
       () => {
-        this.body.style.paddingLeft = this.state.isSidebarOpen
-          ? "15em"
-          : this.env.isSmall
-            ? "0em"
+        this.body.style.paddingLeft = this.env.isSmall
+          ? "0em"
+          : this.state.isSidebarOpen
+            ? "15em"
             : "4.25em";
       },
       () => [this.state.isSidebarOpen, this.env.isSmall],
@@ -42,10 +42,10 @@ patch(NavBar.prototype, {
 
   toggleSidebar() {
     this.state.isSidebarOpen = !this.state.isSidebarOpen;
-    this.body.style.paddingLeft = this.state.isSidebarOpen
-      ? "15em"
-      : this.env.isSmall
-        ? "0em"
+    this.body.style.paddingLeft = this.env.isSmall
+      ? "0em"
+      : this.state.isSidebarOpen
+        ? "15em"
         : "4.25em";
   },
 

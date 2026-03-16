@@ -452,10 +452,12 @@
   content: "\f052";
 }
 .fa-chevron-left:before {
-  content: "\f053";
+  content: "\EA64";
+  font-family: "remixicon" !important;
 }
 .fa-chevron-right:before {
-  content: "\f054";
+  content: "\EA6E";
+  font-family: "remixicon" !important;
 }
 .fa-plus-circle:before {
   content: "\ea11";
@@ -491,16 +493,20 @@
   content: "\f05e";
 }
 .fa-arrow-left:before {
-  content: "\f060";
+  content: "\EA60";
+  font-family: "remixicon" !important;
 }
 .fa-arrow-right:before {
-  content: "\f061";
+  content: "\EA6C";
+  font-family: "remixicon" !important;
 }
 .fa-arrow-up:before {
-  content: "\f062";
+  content: "\EA76";
+  font-family: "remixicon" !important;
 }
 .fa-arrow-down:before {
-  content: "\f063";
+  content: "\EA4C";
+  font-family: "remixicon" !important;
 }
 .fa-mail-forward:before {
   content: "\f0fd";

@@ -33,6 +33,6 @@ of Odoo Community Edition with a clean and professional look.
     'license': 'OPL-1',
     'application': False,
     'installable': True,
-    'price': 1.00,
-    'currency': 'EUR',
+    'price': 1.99,
+    'currency': 'USD',
 }
